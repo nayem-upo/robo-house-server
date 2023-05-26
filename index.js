@@ -7,6 +7,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 //midlewares
+app.use(cors());
+app.use(express.json());
 
 
 const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.obhdclo.mongodb.net/?retryWrites=true&w=majority`;
